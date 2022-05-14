@@ -1,0 +1,320 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{143452fb-b0f0-42f5-8d0e-607364410b1a}</ProjectGuid>
+    <RootNamespace>CaUsingLod</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)bin\$(Configuration)\$(Platform)\$(ProjectName)\</OutDir>
+    <IntDir>$(SolutionDir)obj\$(Configuration)\$(Platform)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)bin\$(Configuration)\$(Platform)\$(ProjectName)\</OutDir>
+    <IntDir>$(SolutionDir)obj\$(Configuration)\$(Platform)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)bin\$(Configuration)\$(Platform)\$(ProjectName)\</OutDir>
+    <IntDir>$(SolutionDir)obj\$(Configuration)\$(Platform)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)bin\$(Configuration)\$(Platform)\$(ProjectName)\</OutDir>
+    <IntDir>$(SolutionDir)obj\$(Configuration)\$(Platform)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>GLEW_STATIC;_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <AdditionalIncludeDirectories>$(ProjectDir)src;$(SolutionDir)Dependencies\glm\include;$(SolutionDir)Dependencies\GLEW\include;$(SolutionDir)Dependencies\GLFW\include;$(SolutionDir)Dependencies\FreeType\include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)Dependencies\GLFW\lib-vc2022;$(SolutionDir)Dependencies\GLEW\lib;$(SolutionDir)Dependencies\FreeType\win64</AdditionalLibraryDirectories>
+      <AdditionalDependencies>/NODEFAULTLIB:LIBCMT;glfw3_mt.lib;glew32s.lib;opengl32.lib;User32.lib;Gdi32.lib;Ole32.lib;Shell32.lib;freetype.lib</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+    <PostBuildEvent>
+      <Message>
+      </Message>
+    </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>rmdir /s /q "$(TargetDir)\shaders" &amp; mkdir "$(TargetDir)\shaders\" &amp;&amp; Xcopy /e "$(ProjectDir)shaders\" "$(TargetDir)\shaders\"
+rmdir /s /q "$(TargetDir)\topDown" &amp; mkdir "$(TargetDir)\topDown\" &amp;&amp; mkdir "$(TargetDir)\topDown\analysisHeatMaps0" &amp;&amp; mkdir "$(TargetDir)\topDown\analysisHeatMaps1" &amp;&amp; mkdir "$(TargetDir)\topDown\analysisData"
+rmdir /s /q "$(TargetDir)\sideScroller" &amp; mkdir "$(TargetDir)\sideScroller\" &amp;&amp; mkdir "$(TargetDir)\sideScroller\analysisHeatMaps0" &amp;&amp; mkdir "$(TargetDir)\sideScroller\analysisHeatMaps1" &amp;&amp; mkdir "$(TargetDir)\sideScroller\analysisData"</Command>
+    </PreBuildEvent>
+    <PreBuildEvent>
+      <Message>Creating required folders</Message>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>GLEW_STATIC;_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <AdditionalIncludeDirectories>$(ProjectDir)src;$(SolutionDir)Dependencies\glm\include;$(SolutionDir)Dependencies\GLEW\include;$(SolutionDir)Dependencies\GLFW\include;$(SolutionDir)Dependencies\FreeType\include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)Dependencies\GLFW\lib-vc2022;$(SolutionDir)Dependencies\GLEW\lib;$(SolutionDir)Dependencies\FreeType\win64</AdditionalLibraryDirectories>
+      <AdditionalDependencies>/NODEFAULTLIB:LIBCMT;glfw3_mt.lib;glew32s.lib;opengl32.lib;User32.lib;Gdi32.lib;Ole32.lib;Shell32.lib;freetype.lib</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+    <PostBuildEvent>
+      <Message>
+      </Message>
+    </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>rmdir /s /q "$(TargetDir)\shaders" &amp; mkdir "$(TargetDir)\shaders\" &amp;&amp; Xcopy /e "$(ProjectDir)shaders\" "$(TargetDir)\shaders\"
+rmdir /s /q "$(TargetDir)\topDown" &amp; mkdir "$(TargetDir)\topDown\" &amp;&amp; mkdir "$(TargetDir)\topDown\analysisHeatMaps0" &amp;&amp; mkdir "$(TargetDir)\topDown\analysisHeatMaps1" &amp;&amp; mkdir "$(TargetDir)\topDown\analysisData"
+rmdir /s /q "$(TargetDir)\sideScroller" &amp; mkdir "$(TargetDir)\sideScroller\" &amp;&amp; mkdir "$(TargetDir)\sideScroller\analysisHeatMaps0" &amp;&amp; mkdir "$(TargetDir)\sideScroller\analysisHeatMaps1" &amp;&amp; mkdir "$(TargetDir)\sideScroller\analysisData"</Command>
+    </PreBuildEvent>
+    <PreBuildEvent>
+      <Message>Creating required folders</Message>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>GLEW_STATIC;_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <AdditionalIncludeDirectories>$(ProjectDir)src;$(SolutionDir)Dependencies\glm\include;$(SolutionDir)Dependencies\GLEW\include;$(SolutionDir)Dependencies\GLFW\include;$(SolutionDir)Dependencies\FreeType\include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)Dependencies\GLFW\lib-vc2022;$(SolutionDir)Dependencies\GLEW\lib;$(SolutionDir)Dependencies\FreeType\win64</AdditionalLibraryDirectories>
+      <AdditionalDependencies>/NODEFAULTLIB:LIBCMT;glfw3_mt.lib;glew32s.lib;opengl32.lib;User32.lib;Gdi32.lib;Ole32.lib;Shell32.lib;freetype.lib</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+    <PostBuildEvent>
+      <Message>
+      </Message>
+    </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>rmdir /s /q "$(TargetDir)\shaders" &amp; mkdir "$(TargetDir)\shaders\" &amp;&amp; Xcopy /e "$(ProjectDir)shaders\" "$(TargetDir)\shaders\"
+rmdir /s /q "$(TargetDir)\topDown" &amp; mkdir "$(TargetDir)\topDown\" &amp;&amp; mkdir "$(TargetDir)\topDown\analysisHeatMaps0" &amp;&amp; mkdir "$(TargetDir)\topDown\analysisHeatMaps1" &amp;&amp; mkdir "$(TargetDir)\topDown\analysisData"
+rmdir /s /q "$(TargetDir)\sideScroller" &amp; mkdir "$(TargetDir)\sideScroller\" &amp;&amp; mkdir "$(TargetDir)\sideScroller\analysisHeatMaps0" &amp;&amp; mkdir "$(TargetDir)\sideScroller\analysisHeatMaps1" &amp;&amp; mkdir "$(TargetDir)\sideScroller\analysisData"</Command>
+    </PreBuildEvent>
+    <PreBuildEvent>
+      <Message>Creating required folders</Message>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>GLEW_STATIC;_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <AdditionalIncludeDirectories>$(ProjectDir)src;$(SolutionDir)Dependencies\glm\include;$(SolutionDir)Dependencies\GLEW\include;$(SolutionDir)Dependencies\GLFW\include;$(SolutionDir)Dependencies\FreeType\include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)Dependencies\GLFW\lib-vc2022;$(SolutionDir)Dependencies\GLEW\lib;$(SolutionDir)Dependencies\FreeType\win64</AdditionalLibraryDirectories>
+      <AdditionalDependencies>/NODEFAULTLIB:LIBCMT;glfw3_mt.lib;glew32s.lib;opengl32.lib;User32.lib;Gdi32.lib;Ole32.lib;Shell32.lib;freetype.lib</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+    <PostBuildEvent>
+      <Message>
+      </Message>
+    </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>rmdir /s /q "$(TargetDir)\shaders" &amp; mkdir "$(TargetDir)\shaders\" &amp;&amp; Xcopy /e "$(ProjectDir)shaders\" "$(TargetDir)\shaders\"
+rmdir /s /q "$(TargetDir)\topDown" &amp; mkdir "$(TargetDir)\topDown\" &amp;&amp; mkdir "$(TargetDir)\topDown\analysisHeatMaps0" &amp;&amp; mkdir "$(TargetDir)\topDown\analysisHeatMaps1" &amp;&amp; mkdir "$(TargetDir)\topDown\analysisData"
+rmdir /s /q "$(TargetDir)\sideScroller" &amp; mkdir "$(TargetDir)\sideScroller\" &amp;&amp; mkdir "$(TargetDir)\sideScroller\analysisHeatMaps0" &amp;&amp; mkdir "$(TargetDir)\sideScroller\analysisHeatMaps1" &amp;&amp; mkdir "$(TargetDir)\sideScroller\analysisData"</Command>
+    </PreBuildEvent>
+    <PreBuildEvent>
+      <Message>Creating required folders</Message>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="src\external\stb_image\stb_image_write.cpp" />
+    <ClCompile Include="src\file\DirectoryTools.cpp" />
+    <ClCompile Include="src\GLDebug.cpp" />
+    <ClCompile Include="src\graphics\Buffer.cpp" />
+    <ClCompile Include="src\graphics\Camera2d.cpp" />
+    <ClCompile Include="src\contexts\CellContext.cpp" />
+    <ClCompile Include="src\graphics\RenderToFile.cpp" />
+    <ClCompile Include="src\graphics\uniformBuffers\MatricesUbo.cpp" />
+    <ClCompile Include="src\graphics\renderers\CellRenderer.cpp" />
+    <ClCompile Include="src\graphics\Shader.cpp" />
+    <ClCompile Include="src\graphics\ShaderProgram.cpp" />
+    <ClCompile Include="src\graphics\Texture.cpp" />
+    <ClCompile Include="src\graphics\uniformBuffers\UboBindings.cpp" />
+    <ClCompile Include="src\graphics\uniformBuffers\UniformBuffer.cpp" />
+    <ClCompile Include="src\graphics\VertexArrayBuilder.cpp" />
+    <ClCompile Include="src\graphics\VertexArray.cpp" />
+    <ClCompile Include="src\graphics\VertexBuffer.cpp" />
+    <ClCompile Include="src\graphics\Window.cpp" />
+    <ClCompile Include="src\helpers\Size.cpp" />
+    <ClCompile Include="src\Heuristic.cpp" />
+    <ClCompile Include="src\input\Input.cpp" />
+    <ClCompile Include="src\input\Inputhelper.cpp" />
+    <ClCompile Include="src\input\Key.cpp" />
+    <ClCompile Include="src\input\MouseButton.cpp" />
+    <ClCompile Include="src\input\UserInput.cpp" />
+    <ClCompile Include="src\helpers\Math.cpp" />
+    <ClCompile Include="src\pcg\CellularAutomata.cpp" />
+    <ClCompile Include="src\pcg\Generators\CaveGenerator.cpp" />
+    <ClCompile Include="src\pcg\Generators\CaveLodGenerator.cpp" />
+    <ClCompile Include="src\pcg\Generators\Generator.cpp" />
+    <ClCompile Include="src\pcg\ui\HistogramHeatMap.cpp" />
+    <ClCompile Include="src\Program.cpp" />
+    <ClCompile Include="src\StringConversions.cpp" />
+    <ClCompile Include="src\StringOperations.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\Broadcaster.h" />
+    <ClInclude Include="src\Callback.h" />
+    <ClInclude Include="src\external\stb_image\stb_image_write.h" />
+    <ClInclude Include="src\file\DirectoryTools.h" />
+    <ClInclude Include="src\GLDebug.h" />
+    <ClInclude Include="src\graphics\Buffer.h" />
+    <ClInclude Include="src\graphics\RenderToFile.h" />
+    <ClInclude Include="src\graphics\Camera2d.h" />
+    <ClInclude Include="src\graphics\CellShape.h" />
+    <ClInclude Include="src\contexts\CellContext.h" />
+    <ClInclude Include="src\graphics\renderers\CellRenderer.h" />
+    <ClInclude Include="src\graphics\CellVertex.h" />
+    <ClInclude Include="src\graphics\renderers\IndexedRenderer.h" />
+    <ClInclude Include="src\graphics\renderers\Renderer.h" />
+    <ClInclude Include="src\graphics\Shader.h" />
+    <ClInclude Include="src\graphics\ShaderProgram.h" />
+    <ClInclude Include="src\graphics\Texture.h" />
+    <ClInclude Include="src\graphics\uniformBuffers\UboBindings.h" />
+    <ClInclude Include="src\graphics\uniformBuffers\UniformBuffer.h" />
+    <ClInclude Include="src\graphics\uniformBuffers\MatricesUbo.h" />
+    <ClInclude Include="src\graphics\VertexArrayBuilder.h" />
+    <ClInclude Include="src\graphics\VertexArray.h" />
+    <ClInclude Include="src\graphics\VertexBuffer.h" />
+    <ClInclude Include="src\graphics\Window.h" />
+    <ClInclude Include="src\Hash.h" />
+    <ClInclude Include="src\helpers\Size.h" />
+    <ClInclude Include="src\Heuristic.h" />
+    <ClInclude Include="src\input\Input.h" />
+    <ClInclude Include="src\input\InputHelper.h" />
+    <ClInclude Include="src\input\Key.h" />
+    <ClInclude Include="src\input\MouseButton.h" />
+    <ClInclude Include="src\input\UserInput.h" />
+    <ClInclude Include="src\helpers\Math.h" />
+    <ClInclude Include="src\pcg\CellularAutomata.h" />
+    <ClInclude Include="src\pcg\Generators\CaveGenerator.h" />
+    <ClInclude Include="src\pcg\Generators\CaveLodGenerator.h" />
+    <ClInclude Include="src\pcg\Generators\Generator.h" />
+    <ClInclude Include="src\pcg\ui\HistogramHeatMap.h" />
+    <ClInclude Include="src\Random.h" />
+    <ClInclude Include="src\StringConversions.h" />
+    <ClInclude Include="src\StringOperations.h" />
+    <ClInclude Include="src\UniqueIntCreator.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="shaders\CellFragmentShader.glsl" />
+    <None Include="shaders\CellVertexShader.glsl" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
